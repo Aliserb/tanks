@@ -4,13 +4,13 @@ import {ACTIONS} from "../playground/config/actions";
 /**
  * Тестовый бот.
  */
-export class YuryBot extends Bot {
+export class TestBot extends Bot {
     constructor() {
         super();
         this._fire = false;
         this.randomStep = 0;
         this.randomFire = 0;
-        this.name = 'Ветерок';
+        this.name = 'Тестовый бот';
         this.stepCount = 0;
     }
 
@@ -27,6 +27,9 @@ export class YuryBot extends Bot {
     }
 
     doStep() {
+
+        console.log(this);
+
         this.doRandomStep(0, 4);
 
         if (this.randomStep === 0) {
